@@ -1,0 +1,202 @@
+@reference "tailwindcss";
+
+/* Base reset */
+@import "tailwindcss/preflight";
+@tailwind utilities;
+
+/* -----------------------------
+   Global behavior
+----------------------------- */
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  @apply bg-white text-zinc-900 antialiased;
+}
+
+.dark body {
+  @apply bg-zinc-950 text-zinc-100;
+}
+
+/* -----------------------------
+   Header / Footer base colors
+----------------------------- */
+header,
+footer {
+  @apply bg-white text-zinc-900;
+}
+
+.dark header,
+.dark footer {
+  @apply bg-zinc-950 text-zinc-100;
+}
+
+/* -----------------------------
+   Typography (Next.js Docs–like)
+----------------------------- */
+h1 {
+  @apply text-4xl font-semibold tracking-tight mb-4;
+}
+
+.dark h1 {
+  @apply text-zinc-100;
+}
+
+h2 {
+  @apply text-2xl font-semibold mt-16 mb-3 text-zinc-900;
+}
+
+.dark h2 {
+  @apply text-zinc-100;
+}
+
+h3 {
+  @apply text-xl font-semibold mt-10 mb-2 text-zinc-900;
+}
+
+.dark h3 {
+  @apply text-zinc-100;
+}
+
+p {
+  @apply text-zinc-700 leading-7 mb-4;
+}
+
+.dark p {
+  @apply text-zinc-300;
+}
+
+strong {
+  @apply text-zinc-900 font-medium;
+}
+
+.dark strong {
+  @apply text-zinc-100;
+}
+
+/* subtle divider between sections */
+section {
+  @apply border-b border-zinc-200 pb-12 mb-12;
+}
+
+.dark section {
+  @apply border-zinc-800;
+}
+
+/* -----------------------------
+   Lists
+----------------------------- */
+ul {
+  @apply list-disc pl-6 mb-4 text-zinc-700;
+}
+
+.dark ul {
+  @apply text-zinc-300;
+}
+
+li {
+  @apply mb-1;
+}
+
+/* -----------------------------
+   Links
+----------------------------- */
+a {
+  @apply text-blue-600 hover:underline;
+}
+
+.dark a {
+  @apply text-blue-400;
+}
+
+/* -----------------------------
+   Callout (important note box)
+----------------------------- */
+.callout {
+  @apply relative my-6 rounded-md bg-zinc-50 px-4 py-3 text-sm text-zinc-700;
+  border-left: 4px solid #f97316; /* orange */
+}
+
+.dark .callout {
+  @apply bg-zinc-900 text-zinc-300;
+}
+
+/* -----------------------------
+   Code blocks
+----------------------------- */
+pre {
+  @apply bg-zinc-900 text-zinc-100 p-4 rounded-lg text-sm my-6 overflow-x-auto;
+}
+
+.dark pre {
+  @apply bg-black;
+}
+
+code {
+  @apply text-orange-500;
+}
+
+pre code {
+  @apply text-zinc-100;
+}
+
+/* -----------------------------
+   Tables (Docs style)
+----------------------------- */
+table {
+  @apply w-full border-collapse my-6 text-sm;
+}
+
+thead {
+  @apply border-b border-zinc-300;
+}
+
+.dark thead {
+  @apply border-zinc-700;
+}
+
+th {
+  @apply text-left font-semibold text-zinc-900 pb-2;
+}
+
+.dark th {
+  @apply text-zinc-100;
+}
+
+td {
+  @apply py-2 text-zinc-700 border-b border-zinc-200;
+}
+
+.dark td {
+  @apply text-zinc-300 border-zinc-800;
+}
+
+/* -----------------------------
+   Images & diagrams
+----------------------------- */
+img,
+svg {
+  max-width: 100%;
+  height: auto;
+}
+
+/* -----------------------------
+   Right TOC active highlight
+----------------------------- */
+.toc-active {
+  color: #2563eb;
+  font-weight: 500;
+  position: relative;
+}
+
+.toc-active::before {
+  content: "";
+  position: absolute;
+  left: -16px;
+  top: 0.35em;
+  height: 1.1em;
+  width: 2px;
+  background-color: #2563eb;
+  border-radius: 2px;
+}

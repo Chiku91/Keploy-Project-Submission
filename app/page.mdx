@@ -1,0 +1,118 @@
+import Callout from "@/components/Callout";
+import ArchitectureDiagram from "@/components/ArchitectureDiagram";
+
+# Keploy Documentation – Go Quickstart & Testing Guide
+
+Keploy helps developers automatically generate tests using **real application traffic**.  
+Instead of relying on mocks, Keploy records real requests, responses, and database calls to validate application behavior reliably.
+
+---
+
+<h2 id="integration-testing">Integration Testing</h2>
+
+Integration testing ensures your application works correctly with databases, APIs, and external services.  
+Keploy records real interactions and replays them during testing to catch regressions that traditional mocks often miss.
+
+<Callout>
+Keploy is optimized for <span style={{ color: "#f97316", fontWeight: 600 }}>real-world integration testing</span> rather than synthetic mocks.
+</Callout>
+
+---
+
+<h2 id="how-keploy-works">How Keploy Works</h2>
+
+Keploy runs alongside your application and records traffic flowing through it.  
+It captures incoming requests, internal calls, database queries, and responses, then replays them during test execution to verify behavior.
+
+<ArchitectureDiagram />
+
+---
+
+<h2 id="api-testing">API Testing</h2>
+
+Keploy enables automated API testing without writing test cases manually.  
+Recorded API requests are replayed to validate response payloads, headers, and status codes across releases.
+
+This helps backend teams detect breaking changes early with minimal effort.
+
+---
+
+<h2 id="unit-testing">Unit Testing</h2>
+
+Keploy does not replace unit testing.  
+Instead, it complements unit tests by validating real execution paths and full request–response behavior.
+
+<Callout>
+Use <span style={{ color: "#f97316", fontWeight: 600 }}>unit tests</span> for business logic and <span style={{ color: "#f97316", fontWeight: 600 }}>Keploy</span> for behavior validation.
+</Callout>
+
+---
+
+<h2 id="installation">Installation</h2>
+
+Keploy can be installed quickly and integrates seamlessly with Docker-based workflows.  
+Make sure the following prerequisites are available before installing.
+
+**Prerequisites**
+- Go ≥ 1.20  
+- Docker Desktop  
+- Git  
+
+<Callout>
+<span style={{ color: "#f97316", fontWeight: 600 }}>Install Keploy CLI</span>
+
+<span style={{ color: "#f97316" }}>
+curl --silent --location https://get.keploy.io | bash
+</span>
+</Callout>
+
+---
+
+<h2 id="go-quickstart">Go Quickstart</h2>
+
+This quickstart demonstrates using Keploy with a Go (Gin) application.  
+You will run a sample service, record real API traffic, and replay it as automated test cases.
+
+<Callout>
+<span style={{ color: "#f97316", fontWeight: 600 }}>Official Go Quickstart</span>  
+<span style={{ color: "#f97316" }}>
+https://keploy.io/docs/quickstart/golang-filter/
+</span>
+</Callout>
+
+---
+
+<h2 id="cli-commands">CLI Commands</h2>
+
+Keploy provides a simple CLI to control recording and testing workflows.  
+These commands are commonly used during development and CI pipelines.
+
+<Callout>
+<span style={{ color: "#f97316" }}>
+keploy record  
+keploy test  
+keploy config  
+keploy version
+</span>
+</Callout>
+
+<Callout>
+<span style={{ color: "#f97316", fontWeight: 600 }}>CLI Documentation</span>  
+<span style={{ color: "#f97316" }}>
+https://keploy.io/docs/running-keploy/cli-commands/
+</span>
+</Callout>
+
+---
+
+<h2 id="configuration">Configuration</h2>
+
+Keploy configuration allows fine-grained control over how tests are recorded and replayed.  
+You can configure filters, noise suppression rules, storage paths, and environment-specific behavior.
+
+<Callout>
+<span style={{ color: "#f97316", fontWeight: 600 }}>Configuration Reference</span>  
+<span style={{ color: "#f97316" }}>
+https://keploy.io/docs/running-keploy/configuration-file/
+</span>
+</Callout>

@@ -196,8 +196,9 @@ All required sections are fully implemented and visible:
 Clone the repository and start the development server:
 
 ```bash
-git clone https://github.com/YOUR_USERNAME/keploy-docs.git
+git clone https://github.com/Chiku91/Keploy-Project-Submission.git
 cd keploy-docs
 npm install
 npm run dev
+
 
